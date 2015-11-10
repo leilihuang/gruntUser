@@ -1,0 +1,13 @@
+{
+  "ml":"../webapp/seo",
+  "slotTest":"",
+  "slotDev":"",
+  "slotPro":"",
+  "name":"zzt",
+  "package":"pc",
+  "static":{
+    "testUrl":"http://s.zzt.tm/zzt",
+    "devUrl":"http://s.zzt.tm/zzt",
+    "proUrl":"http://s.zzt.tm/zzt"
+  }
+}

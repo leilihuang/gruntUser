@@ -1,0 +1,199 @@
+.h-wrap{
+  background:#f6fbff;
+  .h_comingsoon_h {
+    display: block;
+    width: 1000px;
+    min-height: 224px;
+    margin: 0 auto;
+    clear: both;
+    position: relative;
+    .clearfix:after, .clearfix:before {
+      content: '.';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      font-size: 0;
+      line-height: 0;
+      width: 0;
+      height: 0;
+    }
+    .clearfix:after {
+      clear: both;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+    //头部箭头模块内容
+    .hdtit-1 {
+      font-size: 14px;
+      color: #fff;
+      margin-left: -3px;
+      .w-begin-timer {
+        background: #ff5b7d;
+        float: left;
+        font-weight: 400;
+        padding: 0 20px;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        .f-timer {
+          background: url(http://s.zzt.tm/zt/pc/img/icon.png) -62px 0 no-repeat;
+          width: 15px;
+          height: 15px;
+          text-decoration: none;
+          margin-right: 8px;
+          vertical-align: -2px;
+        }
+      }
+    }
+    .hdtit-1, .w-begin-timer {
+      height: 25px;
+      line-height: 25px;
+    }
+    .arrow-pink, .hdtit-1, .hdtit-1 .f-timer {
+      display: inline-block;
+    }
+    //头部箭头模块内容结束
+    .willbegin_box {
+      border-left: 1px solid #fa6ea3;
+      margin-top: -6px;
+      .willbegin_list_h {
+        padding: 20px 0 0;
+        width: 1100px;
+        margin-right: -21px;
+        li:hover{box-shadow:0 0 10px #ffc3e6}
+        li {
+          float: left;
+          width: 320px;
+          background: #fff;
+          margin: 0 17px 20px 4px;
+          position: relative;
+          overflow: hidden;
+          a{
+            img {
+              width: 320px;
+              height: auto;
+              display: block;
+            }
+            .will-newd_icobg {
+              display: none;
+              filter: alpha(Opacity=75);
+              opacity: .75;
+              background: #9281f1;
+              width: 320px;
+              height: 30px;
+            }
+            .will-newd_ico {
+              display: none;
+              position: absolute;
+              height: 30px;
+              top: 178px;
+              left: 10px;
+              color: #fff;
+              font-family: Simsun;
+              text-align: left;
+              line-height: 30px;
+              overflow: hidden;
+            }
+            .discount2 {
+              background: #fff;
+              padding: 0 0 0 20px;
+              font-size: 14px;
+              color: #444;
+              font-family: Arial;
+              position: relative;
+              .dis-txt {
+                display: inline-block;
+                text-decoration: none;
+                height: 36px;
+                b {
+                  font-size: 30px;
+                  color: #ff5b7d;
+                  font-weight: 700;
+                  vertical-align: -3px;
+                }
+              }
+              h3 {
+                float: left;
+                max-width: 220px;
+                height: 30px;
+                padding-top: 5px;
+                overflow: hidden;
+                font-weight: 400;
+              }
+              h3, .l-title {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+              .timer-will {
+                font-size: 12px;
+              }
+              .timer-will {
+                top: 12px;
+                right: 10px;
+              }
+              .time-sur {
+                position: absolute;
+                right: 30px;
+                top: 15px;
+                color: #444;
+                background: url(http://s.zzt.tm/zt/pc/img/icon-time.png) 0 -93px no-repeat;
+                padding-left: 22px;
+                b{
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+          .duty-free {
+            width: 68px;
+            height: 64px;
+            background: url(http://s.zzt.tm/zt/pc/img/tax-picture.png) 0 -96px no-repeat;
+          }
+          .duty-free, .duty-free-big {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+
+  }
+}
+.csideicon_h {
+  position: fixed;
+  bottom: 35%;
+  left: 45.5%;
+  margin-left: 603px;
+  width: 38px;
+  background: 0 0;
+  display: inline-block;
+  zoom: 1;
+  z-index: 500;
+  min-height: 188px;
+  overflow: hidden;
+  ul {
+    width: 38px;
+    li {
+      height: 62px;
+      border-bottom: 1px solid #f6fbff;
+      overflow: hidden;
+      text-align: center;
+      background: #ffa5c7;
+      a.cur, .csideicon_h a:hover {
+        background-color: #fa6ea3;
+      }
+       a {
+        font-size: 14px;
+        color: #fff;
+        padding-top: 10px;
+      }
+       a, .md_logo {
+        overflow: hidden;
+        display: block;
+        height: 62px;
+      }
+    }
+
+  }
+}
