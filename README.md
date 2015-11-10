@@ -26,24 +26,24 @@
 * 环境默认配置文件在app/config/jsmin.json文件
 
 ###常用命令
-grunt clear              .tmp文件夹下所有内容
-grunt css:sass           编译sass样式  //需要在sass.json里面配置，参考例子
-grunt css:less           编译less样式  //需要在marge.json里面配置，参考例子
-grunt concat:all         合并_v1.2css下面的css文件,配置文件在page下面concat.jsond
-grunt cssmin:main            seo下的css压缩样式
-grunt cssmin:test       webapp/_v1.2css压缩到  css文件下
-replace:testcss          替换图片路径，改为服务器路径
-grunt release:sass       编译压缩样式，拷贝图片到.tmp文件目录下(不建议使用)
-grunt release:less       编译压缩样式，拷贝图片到.tmp文件目录下
-grunt js                 自动合并js   //action为合并js入口 , service下写逻辑，同一个页面逻辑放到同一个文件夹下
-grunt jsmin:main         seo下的压缩js
-grunt jsmin:test         webapp/_v1.2js压缩到  js文件下
-grunt watch              实时监控所有代码，当代码改变时，自动重新编译
-grunt img:min            压缩图片
-grunt html:min           压缩html
-grunt pro               一键编译，合并，压缩
-grunt css:pro               一键编译，合并，压缩
-grunt commit:pro        上传到ftp服务器
+* grunt clear              .tmp文件夹下所有内容
+* grunt css:sass           编译sass样式  //需要在sass.json里面配置，参考例子
+* grunt css:less           编译less样式  //需要在marge.json里面配置，参考例子
+* grunt concat:all         合并_v1.2css下面的css文件,配置文件在page下面concat.jsond
+* grunt cssmin:main            seo下的css压缩样式
+* grunt cssmin:test       webapp/_v1.2css压缩到  css文件下
+* replace:testcss          替换图片路径，改为服务器路径
+* grunt release:sass       编译压缩样式，拷贝图片到.tmp文件目录下(不建议使用)
+* grunt release:less       编译压缩样式，拷贝图片到.tmp文件目录下
+* grunt js                 自动合并js   //action为合并js入口 , service下写逻辑，同一个页面逻辑放到同一个文件夹下
+* grunt jsmin:main         seo下的压缩js
+* grunt jsmin:test         webapp/_v1.2js压缩到  js文件下
+* grunt watch              实时监控所有代码，当代码改变时，自动重新编译
+* grunt img:min            压缩图片
+* grunt html:min           压缩html
+* grunt pro               一键编译，合并，压缩
+* grunt css:pro               一键编译，合并，压缩
+* grunt commit:pro        上传到ftp服务器
 
 ###操作流程
 * 先编译less============================================================（grunt css:less）
