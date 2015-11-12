@@ -475,9 +475,8 @@ module.exports = function (grunt) {
     grunt.registerTask("release:less", ["clean:css", 'copy:main','less','cssmin']);
 
 
-    grunt.registerTask('zzt',["clean:test",'copy:test','concat','js','cssmin','uglify']);
-    grunt.registerTask('css:pro',['less','concat:all','cssmin']);
-    grunt.registerTask("pro", [/*'copy:test',*/'less','concat:all','js','sprite','replace:proHtml','cssmin','uglify']);
+
+    grunt.registerTask("pro", ['clear:test','copy:test','less','js','sprite','replace:proHtml','cssmin','uglify']);
     grunt.registerTask("commit:dev",['ftp-deploy:dev']);
     grunt.registerTask("commit:test",['ftp-deploy:test']);
     grunt.registerTask("commit:pro",['ftp-deploy:pro']);
