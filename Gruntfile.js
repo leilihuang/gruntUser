@@ -38,13 +38,6 @@ module.exports = function (grunt) {
                 src: ["js/**/*.js", "!*.min.js"],
                 dest: "<%=pz.ml%>/",
                 ext: ".js"
-            },
-            test:{
-                expand: true,
-                cwd: "../webapp/_v1.2js",
-                src: ["*.js", "!*.min.js"],
-                dest: "../webapp/js/",
-                ext: ".js"
             }
         },
         /**css压缩*/
@@ -55,15 +48,6 @@ module.exports = function (grunt) {
                     cwd: "<%=pz.ml%>/",
                     src: ["css/*.css", "!*.min.css"],
                     dest: "<%=pz.ml%>/",
-                    ext: ".css"
-                }]
-            },
-            test:{
-                files: [{
-                    expand: true,
-                    cwd: "../webapp/_v1.2css/",
-                    src: ["*.css", "!*.min.css"],
-                    dest: "../webapp/css/",
                     ext: ".css"
                 }]
             }
@@ -99,9 +83,9 @@ module.exports = function (grunt) {
             test:{
                 files:[{
                     expand:true,
-                    cwd:"<%=pz.ml%>",
-                    src:"../img/**/*.*",
-                    dest:"<%=pz.ml%>/img/"
+                    cwd:"page/",
+                    src:"img/**/*.*",
+                    dest:"<%=pz.ml%>/"
                 },{
                     expand:true,
                     cwd:"page",
@@ -116,7 +100,7 @@ module.exports = function (grunt) {
                 options: {
                     separator: ""
                 },
-                files: grunt.file.readJSON("page/concat.json")
+                files: grunt.file.readJSON("page/config/concat.json")
             }
         },
         /**编译less样式*/
@@ -125,7 +109,7 @@ module.exports = function (grunt) {
                 options: {
                     paths: ['page/css']
                 },
-                files: grunt.file.readJSON('page/less.json')
+                files: grunt.file.readJSON('page/config/less.json')
             }
         },
         /**替换所有文件前缀路径*/
@@ -370,27 +354,15 @@ module.exports = function (grunt) {
         watch:{
             js:{
                 files:"app/**/*.js",
-                tasks:[/*"newer:clean:js",*/"requirejs","replace:js","newer:jshint"]
+                tasks:["newer:clean:js","requirejs","replace:js"]
             },
             css:{
                 files:"page/css/**/*.less",
-                tasks:[/*"clean:css",*/"less","sprite",'concat:all'],
+                tasks:["less","sprite"],
                 options:{
                     livereload:true
                 }
             }
-            /*            all:{
-             files:["app/!**!/!*.js","page/css/!**!/!*.less"],
-             tasks:["clean:test",'copy:test',"less","sprite","requirejs","replace:js","replace:test","replace:testcss","jshint","clean:testjs"]
-             }*/
-            /*            sass:{
-             files:["app/!**!/!*.js","page/css/!**!/!*.scss"],
-             tasks:["clean:test",'copy:test',"sass","sprite","requirejs","replace:js","replace:test","replace:testcss","jshint","clean:testjs"]
-             },
-             less:{
-             files:["app/!**!/!*.js","page/css/!**!/!*.less"],
-             tasks:["clean:test",'copy:test',"less","sprite","requirejs","replace:js","replace:test","replace:testcss","jshint","clean:testjs"]
-             }*/
         },
         /**图片压缩插件，优化图片*/
         imagemin:{
@@ -427,7 +399,7 @@ module.exports = function (grunt) {
                 options:{
                     style:"expanded"
                 },
-                files:grunt.file.readJSON('page/sass.json')
+                files:grunt.file.readJSON('page/config/sass.json')
             }
         },
         /**ftp文件上传*/
@@ -505,14 +477,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('zzt',["clean:test",'copy:test','concat','js','cssmin','uglify']);
     grunt.registerTask('css:pro',['less','concat:all','cssmin']);
-
-    /*    grunt.registerTask("dev", ['clean:test','copy:test','less','sprite','requirejs','replace:proHtml','replace:devcss','clean:testjs']);
-     grunt.registerTask("test", ['clean:test','copy:test','sass','sprite','requirejs','replace:proHtml','replace:testcss','clean:testjs']);
-     grunt.registerTask("build", ['clean:test','copy:test','sass','sprite','requirejs','replace:css','replace:js','cssmin','uglify','clean:testjs']);*/
-
-/*    grunt.registerTask("dev", [/!*'copy:test',*!/'less','concat:all','js','uglify','sprite','replace:testcss','cssmin']);*/
     grunt.registerTask("pro", [/*'copy:test',*/'less','concat:all','js','sprite','replace:proHtml','cssmin','uglify']);
-
     grunt.registerTask("commit:dev",['ftp-deploy:dev']);
     grunt.registerTask("commit:test",['ftp-deploy:test']);
     grunt.registerTask("commit:pro",['ftp-deploy:pro']);

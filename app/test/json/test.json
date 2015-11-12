@@ -1,0 +1,9 @@
+{
+  "status":"0",
+  "message":"登录失败",
+  "data":{
+    "name":"leilihuang",
+    "password":"123456",
+    "url":"http://www.zzt.tm"
+  }
+}

@@ -2,6 +2,7 @@
 .Python
 env/
 build/
+.tmp/
 develop-eggs/
 static/dist/
 downloads/
@@ -29,6 +30,7 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *,cover
+.idea/*
 
 # Translations
 *.mo
