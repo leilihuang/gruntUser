@@ -74,6 +74,6 @@ grunt commit:test     将.tmp目录下的所有文件放到测试服务器上
 grunt pro             编译js css 拷贝图片到.tmp目录下，替换样式背景图片url路径   //路径配置在app/config/jsmin.json文件中 分别对应static下的provUrl
 grunt commit:pro      将.tmp目录下的所有文件放到开发服务器上，让运维同步更新目录文件，将代码放到线上环境
 
-所有代码默认是提交到 ftp://10.2.8.102/www/   文件夹下面
+
 
 

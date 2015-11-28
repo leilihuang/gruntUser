@@ -1,3 +1,4 @@
 {
-  ".tmp/css/login.css":["page/css/log.less"]
+  "dest/css/login.css":["page/css/log.less"],
+  "dest/css/table.css":["page/css/table.less"]
 }
